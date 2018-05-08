@@ -90,9 +90,10 @@ Vue.component('FaceLock', {
     const protocol = window.location.protocol
     // const protocol = 'https:'
     const host = '18.237.102.7'
-    const port = 8080
+    // const port = protocol === 'https:' ? 443 : 80
     this.fv = new FaceVerify({
-      facebox: `${protocol}//${host}:${port}`,
+      // facebox: `${protocol}//${host}:${port}`,
+      facebox: `${protocol}//${host}`,
       video: this.$refs.video,
       snapshotInterval: 1000,
       error: this.onError,
