@@ -87,13 +87,12 @@ Vue.component('FaceLock', {
   },
 
   mounted () {
-    // const host = 'localhost'
-    // const host = window.location.hostname
+    const protocol = window.location.protocol
+    // const protocol = 'https:'
     const host = '18.237.102.7'
     const port = 8080
     this.fv = new FaceVerify({
-      facebox: `http://${host}:${port}`,
-      // videoSelector: `#${this.videoID}`,
+      facebox: `${protocol}//${host}:${port}`,
       video: this.$refs.video,
       snapshotInterval: 1000,
       error: this.onError,
@@ -106,7 +105,7 @@ Vue.component('FaceLock', {
 
   methods: {
     hide () {
-      // this.reset()
+      this.reset()
       this.isOpen = false
       this.setStatus('HIDDEN')
       if (this.fv.timer) this.fv.stop(true)
