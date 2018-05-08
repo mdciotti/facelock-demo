@@ -1,0 +1,285 @@
+
+#facelock-app .page-cover {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: grayscale(0%);
+  transition: all 0.5s linear;
+}
+
+#facelock-app .modal {
+  font-family: 'Clear Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14),
+              0 9px 46px 8px rgba(0,0,0,0.12),
+              0 11px 15px -7px rgba(0,0,0,0.2);
+  color: #171717;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  transform: translateY(-450px);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#facelock-app.open .modal {
+  transform: translateY(0);
+}
+
+#facelock-app.open .page-cover {
+  display: block;
+  /* backdrop-filter: grayscale(100%); */
+}
+
+#facelock-app .page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  /* background-color: rgba(247, 247, 247, 0.6); */
+  background-color: rgba(247, 247, 247, 1);
+  border-radius: 0 0 2px 2px;
+  /* backdrop-filter: blur(10px); */
+}
+
+#facelock-app .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#facelock-app .logo {
+  display: flex;
+  align-items: center;
+}
+
+#facelock-app .logo img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-right: 10px;
+}
+
+#facelock-app .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+#facelock-app .logo h1 .face {
+  font-weight: 700;
+}
+
+#facelock-app .logo h1 .lock {
+  font-weight: 400;
+}
+
+#facelock-app .page.register button.register {
+  display: none;
+}
+
+#facelock-app .message {
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#facelock-app .page.register .message {
+  display: none;
+}
+
+#facelock-app .video {
+  display: none;
+  padding: 0;
+  flex: 0 0 240px;
+  height: 240px;
+  width: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border: 6px solid #333333;
+  background: black;
+  border-radius: 50%;
+  box-sizing: content-box;
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.5, 1),
+              opacity 0.5s linear;
+}
+#facelock-app .page.verify .video {
+  display: none;
+}
+#facelock-app .page.register .video {
+  display: block;
+}
+#facelock-app .video.recognized {
+  border-color: rgb(14, 153, 251);
+}
+#facelock-app .video.unrecognized {
+  border-color: #d5484f;
+}
+#facelock-app video {
+  display: block;
+  /* max-width: 100%; */
+  height: 240px;
+  width: 320px;
+  margin-left: -40px;
+}
+
+#facelock-app .form {
+  display: none;
+  /* padding: 20px; */
+  text-align: center;
+}
+#facelock-app .page.register .form {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+#facelock-app .form div {
+  flex: 1 1 auto;
+}
+#facelock-app .form input {
+  height: 20px;
+  width: 120px;
+}
+
+#facelock-app .eye {
+  margin: 0 auto;
+  position: relative;
+  width: 184px;
+  height: 184px;
+}
+#facelock-app .page.register .eye {
+  display: none;
+}
+
+#facelock-app .brow {
+  height: 184px;
+  width: 184px;
+  position: absolute;
+  border-radius: 92px;
+  border: 24px solid transparent;
+  box-sizing: border-box;
+  border-top-color: rgb(14, 153, 251);
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.5, 1);
+  animation-fill-mode: both;
+  transform: rotateZ(0deg);
+}
+#facelock-app .eye.spinning .brow {
+  animation: facelock-spin 2s linear 0s infinite;
+}
+#facelock-app .eye.success .brow {
+  transform: rotateZ(180deg);
+}
+#facelock-app .brow .left,
+#facelock-app .brow .right {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background: rgb(14, 153, 251);
+  border-radius: 50%;
+  transform-origin: center 92px;
+  top: -24px;
+  left: 56px;
+}
+#facelock-app .brow .left {
+  transform: rotateZ(-45deg);
+}
+#facelock-app .brow .right {
+  transform: rotateZ(45deg);
+}
+
+#facelock-app .pupil {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 52px;
+  left: 52px;
+  animation: none;
+  transform-style: preserve-3d;
+}
+#facelock-app .eye.looking .pupil {
+  animation: facelock-look 2s cubic-bezier(0.2, 1, 0.5, 1) 0s infinite;
+}
+#facelock-app .pupil .left,
+#facelock-app .pupil .right {
+  width: 40px;
+  position: absolute;
+  top: 0;
+  height: 80px;
+  background-color: rgb(14, 153, 251);
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.5, 1);
+}
+#facelock-app .eye.success .pupil .left,
+#facelock-app .eye.success .pupil .right {
+  top: 24px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  transform: none;
+}
+#facelock-app .eye.spinning .pupil .left,
+#facelock-app .eye.spinning .pupil .right {
+  transform: none;
+}
+
+#facelock-app .pupil .left {
+  left: 0;
+  transform-origin: center right;
+  border-radius: 40px 0 0 40px;
+}
+#facelock-app .eye.looking .pupil .left {
+  transform: rotateY(-45deg);
+}
+
+#facelock-app .pupil .right {
+  right: 0;
+  border-radius: 0 40px 40px 0;
+  transform-origin: center left;
+}
+#facelock-app .eye.looking .pupil .right {
+  transform: rotateY(45deg);
+}
+#facelock-app .eye.success .pupil .right {
+  animation: facelock-wink 2s cubic-bezier(0.2, 1, 0.5, 1) 0s 1;
+}
+
+@keyframes facelock-spin {
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(360deg); }
+}
+@keyframes facelock-look {
+    0% { transform: rotateY(-30deg); }
+   40% { transform: rotateY(-30deg); }
+   50% { transform: rotateY( 30deg); }
+   90% { transform: rotateY( 30deg); }
+  100% { transform: rotateY(-30deg); }
+}
+@keyframes facelock-wink {
+    0% { transform: scale(1, 1); }
+   40% { transform: scale(1, 1); }
+   50% { transform: scale(1, 0.2); }
+   60% { transform: scale(1, 0.2); }
+   70% { transform: scale(1, 1); }
+  100% { transform: scale(1, 1); }
+}

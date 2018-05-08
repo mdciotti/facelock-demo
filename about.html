@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FaceLock</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="/static/face-verify.js"></script>
+    <link rel="stylesheet" href="/static/facelock.css"></script>
+    <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      box-sizing: border-box;
+      padding: 64px 32px;
+      height: 100%;
+      background-image: url('/static/jj-ying-236821-unsplash.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Clear Sans Light', sans-serif;
+      font-weight: 200;
+    }
+
+    .wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+      /* border-radius: 20px; */
+      /* overflow: hidden; */
+      box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+    }
+    .wrapper .content {
+      /* background-color: rgba(0,0,0,0.5); */
+      /* background-color: rgba(233, 64, 61, 0.5); */
+      /* overflow: hidden; */
+      /* border-radius: 20px; */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      -ms-backdrop-filter: blur(10px);
+      -moz-backdrop-filter: blur(10px);
+      color: #000000;
+    }
+    .content header, .content footer {
+      background-color: rgba(255,255,255,0.5);
+      padding: 64px;
+      display: flex;
+      justify-content: center;
+      line-height: 1;
+    }
+    .content section {
+      background-color: rgba(203,203,203,0.5);
+      padding: 64px;
+    }
+    .content header img {
+      margin: 0 32px;
+    }
+    .content h1 {
+      font-size: 64px;
+      margin: 0 0 16px 0;
+    }
+    .content h1 span {
+      font-family: 'Clear Sans', sans-serif;
+      font-weight: 400;
+    }
+    .content .subtitle {
+      font-size: 24px;
+      opacity: 0.5;
+      margin: 0;
+    }
+    .content footer {
+      padding: 16px;
+      font-size: 12px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <header>
+          <div class="left">
+            <img src="/static/facelock.svg" width="140"/>
+          </div>
+          <div class="right">
+            <h1>Face<span>Lock</span></h1>
+            <p class="subtitle">Facial authentication for the masses.</p>
+          </div>
+        </header>
+        <section>
+          <button onclick="FaceLock.show()">Open FaceLock</button>
+          <!-- <a href="/threshold/">View demo website</a> -->
+        </section>
+        <footer>
+          &copy; 2018 FaceLock. <a href="https://github.com/cosc4397/S18-T3">View Source</a>.
+        </footer>
+      </div>
+    </div>
+    <script src="/static/facelock.js"></script>
+  </body>
+</html>

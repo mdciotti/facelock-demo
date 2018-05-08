@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Flamingo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="threshold_files/threshold.min.css"/>
+  <script src="/threshold_files/jquery.min.js"></script>
+  <script src="/threshold_files/jquery.dropotron.min.js"></script>
+  <script src="/threshold_files/skel.min.js"></script>
+  <script src="/threshold_files/util.js"></script>
+  <script src="/threshold_files/respond.min.js"></script>
+  <!-- FaceLock imports, actual JS is at bottom of <body> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.runtime.min.js"></script>
+  <script type="text/javascript" src="/static/face-verify.js"></script>
+  <link rel="stylesheet" href="/static/facelock.css"></script>
+</head>
+
+<body class="homepage">
+  <div id="page-wrapper">
+    <div id="header">
+      <div class="container">
+        <div id="logo">
+          <h1><a href="/">Flamingo</a></h1></div>
+        <nav id="nav">
+          <ul>
+            <li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap;"><a href="#">Dropdown</a>
+              <ul class="" style="user-select: none; display: none; position: absolute;">
+                <li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
+                <li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
+                <li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
+                <li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap;"><a href="#" style="display: block;">Phasellus consequat</a>
+                  <ul style="user-select: none; display: none; position: absolute;" class="dropotron">
+                    <li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
+                    <li style="white-space: nowrap;"><a href="#" style="display: block;">Phasellus consequat</a></li>
+                    <li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
+                    <li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
+                    <li style="white-space: nowrap;"><a href="#" style="display: block;">Veroeros feugiat</a></li>
+                  </ul>
+                </li>
+                <li style="white-space: nowrap;"><a href="#" style="display: block;">Veroeros feugiat</a></li>
+              </ul>
+            </li>
+            <li style="white-space: nowrap;"><a href="left-sidebar.html">Left Sidebar</a></li>
+            <li style="white-space: nowrap;"><a href="right-sidebar.html">Right Sidebar</a></li>
+            <li style="white-space: nowrap;"><a href="two-sidebar.html">Two Sidebar</a></li>
+            <li style="white-space: nowrap;"><a href="no-sidebar.html">No Sidebar</a></li>
+            <li style="white-space: nowrap;"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="banner" class="container">
+        <div class="row 200%">
+          <section class="6u 12u(narrower) important(narrower)">
+            <div id="box1">
+              <div id="box2"><img src="threshold_files/pic01.jpg" alt="" class="image full"></div>
+              <div id="box3"><img src="threshold_files/pic02.jpg" alt="" class="image full"></div>
+            </div>
+          </section>
+          <section class="6u 12u(narrower)">
+            <div id="one">
+              <header>
+                <h2>Donec nec justo eget jelis facilisis</h2>
+                <span class="byline">Cestibulum auctor dapibus neque euismod inpharetra ultricies indiamed arcu</span>
+              </header>
+              <a href="javascript:FaceLock.show()" class="button">Gravida beci</a>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div id="extra" class="container">
+        <ul>
+          <li><a href="#"><img src="threshold_files/pic03.jpg" alt="" class="image full"></a></li>
+          <li>
+            <div class="content">
+              <h3>Integer vitae libero acrisus egestas placerat sollicitudin leo</h3>
+              <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p>
+              <a href="#" class="button">More Info</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="extra2" class="container">
+        <div class="row">
+          <section class="6u 12u(narrower)">
+            <header>
+              <h2>Aliquam tincidunt mauris eu risus</h2>
+              <span class="byline">Etiam pellentesque mauris ut lectus nunc tellus ante mattis eget gravida vitae ultricies</span>
+            </header>
+          </section>
+          <section class="6u 12u(narrower)">
+            <ul class="icon">
+              <li><span class="pennant"><a href="#"><span class="fa fa-user"></span></a></span></li>
+              <li><div class="pennant"><a href="#"><span class="fa fa-rocket"></span></a></div></li>
+              <li><div class="pennant"><a href="#"><span class="fa fa-shield"></span></a></div></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div id="featured" class="container">
+        <div class="row">
+          <section class="4u 12u(narrower)">
+            <div class="image-border"><img src="threshold_files/pic04.jpg" alt="" class="image full"></div>
+          </section>
+          <section class="8u 12u(narrower)">
+            <ul class="list">
+              <li>
+                <h3>Integer vitae libero</h3>
+                <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae libero luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing</p>
+                <a href="#" class="button">More Info</a>
+              </li>
+              <li>
+                <h3>Cras iaculis ultri</h3>
+                <p>Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis</p>
+                <a href="#" class="button">More Info</a>
+              </li>
+              <li>
+                <h3>Nam convallis pelle</h3>
+                <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem lorem ipsum</p>
+                <a href="#" class="button">More Info</a>
+              </li>
+              <li>
+                <h3>Vivamus adipiscing</h3>
+                <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus ferment</p>
+                <a href="#" class="button">More Info</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div id="contact">
+          <ul>
+            <li>
+              <div class="p-icon"><span class="fa fa-cog"></span></div><span> 1234 Fictional Road Suite<br>  #789 Nashville, TN 00000 </span></li>
+            <li>
+              <div class="p-icon"><span class="fa fa-anchor"></span></div><span><a href="#">info@untitled.com</a><br> <a href="#">contact@untitled.com</a></span></li>
+            <li>
+              <div class="p-icon"><span class="fa fa-user"></span></div><span>(000) 555-555-5555<br>  (000) 888-888-8888</span></li>
+            <li>
+              <div class="p-icon"><span class="fa fa-envelope"></span></div><span><a href="#">@untitled-corp</a><br> <a href="#">facebook.com/untitled-corp</a></span></li>
+          </ul>
+        </div>
+        <div id="newsletter">
+          <div class="row">
+            <section class="6u 12u(narrower)"><span>Fusce lobortis lorem at ipsum semper sagittis sui unteconvil sitamet interdium</span></section>
+            <section class="6u 12u(narrower)">
+              <form method="post" action="#" id="subscribe">
+                <input type="text" class="text" name="search" placeholder="Your email address"><a href="#" class="submit">Subscribe</a></form>
+            </section>
+          </div>
+        </div>
+        <div id="copyright"> © Untitled. All rights Reserved </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function($) {
+    skel.breakpoints({ normal: '(max-width: 1280px)', narrow: '(max-width: 1080px)', narrower: '(max-width: 960px)', mobile: '(max-width: 736px)' });
+    $(function() {
+      var $window = $(window),
+        $body = $('body');
+      $('form').placeholder();
+      skel.on('+narrower -narrower', function() { $.prioritize('.important\\28 narrower\\29', skel.breakpoint('narrower').active); });
+      $('#nav > ul').dropotron({ offsetY: -15, mode: 'fade', alignment: 'center', noOpenerFade: true });
+      $('<div id="titleBar">' + '<a href="#navPanel" class="toggle"></a>' + '</div>').appendTo($body);
+      $('<div id="navPanel">' + '<nav>' + '<a href="/" class="link depth-0">Home</a>' + $('#nav').navList() + '</nav>' + '</div>').appendTo($body).panel({ delay: 500, hideOnClick: true, hideOnSwipe: true, resetScroll: true, resetForms: true, side: 'left', target: $body, visibleClass: 'navPanel-visible' });
+      if (skel.vars.os == 'wp' && skel.vars.osVersion < 10) $('#titleBar, #navPanel, #page-wrapper').css('transition', 'none');
+    });
+  })(jQuery);
+  </script>
+  <script src="/static/facelock.js"></script>
+</body>
+</html>
