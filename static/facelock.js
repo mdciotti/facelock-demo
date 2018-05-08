@@ -89,7 +89,7 @@ Vue.component('FaceLock', {
   mounted () {
     const protocol = window.location.protocol
     // const protocol = 'https:'
-    const host = '18.237.102.7'
+    const host = 'facebox.mdc.io'
     // const port = protocol === 'https:' ? 443 : 80
     this.fv = new FaceVerify({
       // facebox: `${protocol}//${host}:${port}`,
